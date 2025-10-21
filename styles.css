@@ -1,0 +1,469 @@
+/*
+  Folha de estilos principal para o site Tizzot Advocacia.
+  Define cores, tipografia e layout responsivo para as diferentes seções.
+*/
+
+:root {
+  --primary: #004e7f;
+  --secondary: #0d5fa6;
+  --accent: #000000;
+  --dark: #051e34;
+  --light: #ffffff;
+  --muted: #f5f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--muted);
+}
+
+/* Cabeçalho e navegação */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Usamos um fundo claro para que o novo símbolo em azul-escuro fique visível */
+  background-color: var(--muted);
+  color: var(--dark);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* A classe .logo não é utilizada. */
+
+
+/* Contêiner da logomarca */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Ícone dentro da marca (símbolo) */
+.logo-icon {
+  height: 35px;
+  width: auto;
+  display: block;
+}
+
+/* Abreviação (container do ícone) */
+.abbr {
+  display: flex;
+  align-items: center;
+}
+
+/* Divisor vertical entre ícone e nome */
+.divider {
+  color: var(--primary);
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Nome completo da marca */
+.full-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* Elementos da hero para reforçar a identidade */
+
+/* Subtagline na hero para identificar a área de atuação */
+.hero-subtagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botão WhatsApp */
+.btn.whatsapp {
+  background-color: #25D366;
+  color: #ffffff;
+}
+
+.btn.whatsapp:hover {
+  background-color: #1ba74a;
+}
+
+header nav {
+  position: relative;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  opacity: 0.7;
+}
+
+/* Botão de menu para telas pequenas */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Hero */
+.hero {
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: var(--light);
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  background-color: #d2d2d2;
+  color: var(--dark);
+  padding: 0.9rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+/* Seções gerais */
+section {
+  padding: 5rem 1.5rem;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Processo */
+.process .steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.process .step {
+  background-color: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 320px;
+}
+
+.process .icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.process h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.process p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Casos */
+.cases .case-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cases .case {
+  background-color: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  max-width: 320px;
+}
+
+.cases .case h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.cases .case p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Sobre */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about .text {
+  flex: 1 1 300px;
+}
+
+.about .image {
+  flex: 1 1 300px;
+}
+
+.about .image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Diferenciais */
+.differentials .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.differentials .item {
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.differentials .item h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.differentials .item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* FAQ */
+.faq .accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq details {
+  background-color: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+}
+
+.faq summary {
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+}
+
+.faq p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* Contato */
+.contact .form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.whatsapp-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.whatsapp-link a {
+  color: #25D366;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp-link a:hover {
+  text-decoration: underline;
+}
+
+/* Informações de contato adicionais */
+.contact-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+  .differentials .item {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary);
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+  .process .step,
+  .cases .case,
+  .differentials .item {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
