@@ -55,12 +55,14 @@ header {
   height: 35px;
   width: auto;
   display: block;
+  
 }
 
 /* Abreviação (container do ícone) */
 .abbr {
   display: flex;
   align-items: center;
+  
 }
 
 /* Divisor vertical entre ícone e nome */
