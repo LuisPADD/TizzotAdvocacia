@@ -25,16 +25,15 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Quem somos</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                Especialistas em Direito do Passageiro desde 2015, a Tizzot Advocacia é uma empresa de tecnologia e
-                advocacia que ajuda passageiros a receberem compensações por problemas com voos.
+                A Tizzot Advocacia é especializada em proteger os direitos dos passageiros aéreos. Com ampla experiência em Direito do Consumidor 
+                e atuação destacada em ações contra companhias aéreas, nosso escritório oferece atendimento exclusivo e totalmente digital.
               </p>
               <p>
-                Acreditamos que o processo de buscar seus direitos não precisa ser complicado. Por isso, criamos uma
-                plataforma 100% online que torna tudo mais simples, rápido e transparente.
+                Nos apoiamos em três pilares: <b>compromisso com seus direitos</b> , escutando você e tratando sua demanda com seriedade; <b>agilidade e transparência</b>, sem juridiquês e com informações constantes sobre o andamento do seu caso; e <b>alcance nacional sem burocracia</b>, 
+                para que você resolva tudo pelo celular, onde quer que esteja.
               </p>
               <p>
-                Nossa equipe é formada por advogados especializados que já ajudaram milhares de passageiros a receberem
-                suas compensações. Atuamos em todo o Brasil e cuidamos de todo o processo para você.
+                Você só paga honorários se for indenizado. Analisamos cada caso de forma gratuita e responsável, buscando sempre a melhor solução para o seu problema.
               </p>
               <p className="font-semibold text-primary">Você só paga se ganhar. Sem riscos, sem surpresas.</p>
             </div>
